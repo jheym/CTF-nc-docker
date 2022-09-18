@@ -158,8 +158,8 @@ def generate_dockerfile(challenges):
             script += "echo \'\\e[32m{}\\e[0m\'\n".format((' \\e[33m' + challenge['name'] + ' \\e[32m').center(72,'='))
 
             if CONFIG['show_warn_msg']:
-                script += "echo \'\\e[32m!!!  \\e[31m此环境为测试训练环境，安全性较弱，请勿执行恶意代码  \\e[32m!!!\\e[0m\'\n"
-                script += "echo \'\\e[32m!!!   \\e[31mDO NOT EXECUTE HARMFUL CODE IN THIS TRAINING ENV   \\e[32m!!!\\e[0m\'\n"
+                script += "echo \'\\e[32m!!!  \\e[31mSACRAMENTO STATE CYBER DEFENSE CLUB  \\e[32m!!!\\e[0m\'\n"
+                script += "echo \'\\e[32m!!!   \\e[31mNetcat Training Environment   \\e[32m!!!\\e[0m\'\n"
                 script += "echo \'\\e[32m{}\\e[0m\'\n".format('=' * 60)
 
             for item in challenge['echo_msg']:
@@ -167,9 +167,9 @@ def generate_dockerfile(challenges):
 
             if challenge['download_file_name'] != "":
                 if CONFIG['show_download_host']:
-                    script += f"echo \'题目附件：{CONFIG['download_url']}/{challenge['download_file_name']}\'\n"
+                    script += f"echo \'Challenge：{CONFIG['download_url']}/{challenge['download_file_name']}\'\n"
                 else:
-                    script += f"echo \'题目附件：/{challenge['download_file_name']}\'\n"
+                    script += f"echo \'Challenge URL：/{challenge['download_file_name']}\'\n"
             script += "echo \'\\e[32m{}\\e[0m\'\n".format('=' * 60)
             script += "echo \'\'\n"
 
